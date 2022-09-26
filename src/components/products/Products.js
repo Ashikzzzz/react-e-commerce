@@ -2,9 +2,11 @@ import React from 'react';
 import './Products.css'
 
 const Products = (props) => {
-    // destructuring 
-    const {id,category,name,img,seller ,price,stock,ratings,ratingsCount,shipping,quantity}=props.product;
-// console.log(props.product)
+    // destructuring product and evenhandler
+    const {handleAddToCart,product}=props;
+    
+    const {id,category,name,img,seller ,price,stock,ratings,ratingsCount,shipping,quantity}=product;
+
 
     return (
             // display all data particularlly using ternary operator
@@ -27,7 +29,7 @@ const Products = (props) => {
 
             {/* cart button  */}
 
-        <button className='btn-cart'>
+        <button onClick={()=>handleAddToCart(product)} className='btn-cart'>
             <p>Add to cart</p>
         </button>
         </div>

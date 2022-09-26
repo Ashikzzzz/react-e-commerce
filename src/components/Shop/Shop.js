@@ -14,6 +14,12 @@ const Shop = () => {
         .then(data =>setProducts(data))
     } ,[])
 
+    // even handler 
+
+    const handleAddToCart=(product)=>{
+console.log(product)
+    }
+
     return (
 
     // this is for the place of  display products         
@@ -27,11 +33,12 @@ const Shop = () => {
                 products.map(product=><Products
                      key={product.id}
                     product={product}
+                    handleAddToCart={handleAddToCart}
                 ></Products>)
              }             
             </div>
             <div className='cart-container'>
-           <h1>This is csrt</h1>
+           <h1>Order Summery</h1>
             </div>
         </div>
     );
