@@ -3,8 +3,9 @@ import Products from '../products/Products';
 import './Shop.css'
 
 const Shop = () => {
-
+//    states defined
     const [products,setProducts]=useState([])
+    const [cart,setCart]=useState([])
    
     // load data here
 
@@ -17,7 +18,8 @@ const Shop = () => {
     // even handler 
 
     const handleAddToCart=(product)=>{
-console.log(product)
+        const newCart= [...cart,product]
+        setCart(newCart)
     }
 
     return (
@@ -39,6 +41,7 @@ console.log(product)
             </div>
             <div className='cart-container'>
            <h1>Order Summery</h1>
+           <h3>Selected items: {cart.length}</h3>
             </div>
         </div>
     );
