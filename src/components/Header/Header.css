@@ -1,0 +1,30 @@
+/* header styles  */
+
+.header{
+    background-color: #1C2B35;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 110px;
+    padding-right: 110px;
+    font-weight: 400;
+    font-size: 17px;
+}
+
+/* header anchores  */
+
+.header a{
+    text-decoration: none;
+    color: white;
+    margin-left: 32px;
+}
+
+/* header bar hover effect  */
+
+.header a:hover{
+    background-color: darkcyan;
+    padding: 5px 10px 5px 10px;
+    border-radius: 3px;
+    color: powderblue;
+}
